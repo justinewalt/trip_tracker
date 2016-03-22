@@ -1,0 +1,18 @@
+<h1>Locations For: <= @trip.name %></h1>
+<hr />
+
+<% if @locations.any? %>
+	<ul>
+		<% @locations.each do |location| %>
+			<li>
+				<%= link_to location.name, trip_locations_path(@trip, location) %>
+			</li>
+		<% end %>
+	<% else %>
+		<h3>No locations yet. Please input one using the New Location link below.</h3>
+	<% end %>
+
+	<%= link_to 'New Location', new_trip_location_path(@trip) %>
+
+
+

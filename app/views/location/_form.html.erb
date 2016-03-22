@@ -1,0 +1,6 @@
+<%= form_for @trip.location do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, placeholder: 'City/State', required: true %>
+	<br />
+	<%= f.submit :submit %>
+<% end %>

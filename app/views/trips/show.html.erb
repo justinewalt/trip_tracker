@@ -1,0 +1,17 @@
+<h1> <%= @trip.name %> </h1>
+
+	<label>Start Date</label>
+	<br />
+	<h5> <%= @trip.start %> </h5>
+	<br />
+	<label>End Date</label>
+	<br />
+	<h5> <%= @trip.end %> </h5>
+	<br />
+	<h5> <%= @trip.locations %> </h5>
+
+<%= link_to 'Add Trip Locations', new_trip_location_path(@trip) %>
+<br />
+<%= link_to 'Edit', edit_trip_path %>
+<br />
+<%= link_to 'Delete', trip_path, method: :delete, data: {confirm: 'Really delete this Trip?'} %>

@@ -1,0 +1,23 @@
+<h1>Trip Tracker</h1>
+<hr />
+
+<% @trips.each do |trip| %>
+	<div class="inline">
+		<h3>
+			<%= link_to trip.name, trip_path(trip) %>
+		</h3>
+		<h5>
+			Trip Location Count:
+			<%= trip.locations.count %>
+		</h5>
+		<%= link_to 'Edit', edit_trip_path(trip) %>
+		<br />
+		<%= link_to 'Delete', trip_path(trip), method: :delete, data: {confirm: 'Really delete this Trip?'} %>
+	</div>
+<% end %>
+
+<hr />
+
+<button type='button'>
+	<%= link_to 'Create Trip', new_trip_path %>
+</button>

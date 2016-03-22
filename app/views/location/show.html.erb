@@ -1,0 +1,13 @@
+<h1> <%= @trip.location.name %> </h1>
+
+	<label>Trip Locations</label>
+	<br />
+	<h5> <%= @trip.location %> </h5>
+	<br />
+	
+
+<%= link_to 'Add Trip Locations', new_trip_location_path(@trip) %>
+<br />
+<%= link_to 'Edit', edit_trip_path %>
+<br />
+<%= link_to 'Delete', trip_path, method: :delete, data: {confirm: 'Really delete this Trip?'} %>
